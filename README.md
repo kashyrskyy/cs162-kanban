@@ -2,7 +2,7 @@
 
 ## Application Description
 
-The Kanban Board helps you get around you day by managing your day-to-day list of tasks to be completed. 
+The Kanban Board helps you to get around your day by managing your day-to-day list of tasks to be completed. 
 
 ## Application Features
 
