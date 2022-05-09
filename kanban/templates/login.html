@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<title>
+kanban Login Page
+</title>
+<h1>Login to Kalia's Kanban: The Kaliban</h1>
+
+<div>
+    <center>
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="username" required>
+            <br>
+            <input type="password" name="password" placeholder="password" required>
+            <br>
+            <input type="submit" name="login" value="Login">
+        </form>
+        <form action="/signup" method="GET">
+          <h3>or sign up below:</h3>
+          <input type="submit" name="signup1" value="Sign Up">
+        </form>
+    </center>
+</div>
+
+</html>
