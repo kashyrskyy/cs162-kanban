@@ -45,7 +45,7 @@ flask run
 ```
 ### For Windows:
 ```
-eset FLASK_APP=kanban.py
+set FLASK_APP=kanban.py
 set FLASK_DEBUG=true
 flask run
 ```
