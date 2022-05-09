@@ -2,6 +2,7 @@
 
 # Initial Installation
 Please run the code commands below in the Terminal of your code reader (e.g. Visual Studio Code) to get started. 
+
 Note: Make sure you have opened the folder with this project by clicking "Open..." on the home page of a code reader like Visual Studio Code. Please do so before running the commands below, otherwise they will output an error.
 
 ```
@@ -11,7 +12,7 @@ pip3 install -r requirements.txt
 python3.6 app.py
 ```
 
-# Setting up Flask Application
+# Setting up the Flask Application
 
 ### For MacOS:
 ```
