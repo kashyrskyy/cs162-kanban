@@ -5,9 +5,18 @@ Please run the code commands below in the Terminal of your code reader (e.g. Vis
 
 Note: Make sure you have opened the folder with this project by clicking "Open..." on the home page of a code reader like Visual Studio Code. Please do so before running the commands below, otherwise they will output an error.
 
+#### For MacOS:
 ```
 python3.6 -m venv venv
 source venv/bin/activate
+pip3 install -r requirements.txt
+python3.6 app.py
+```
+
+#### For Windows:
+```
+python3.6 -m venv venv
+venv\Scripts\activate.bat
 pip3 install -r requirements.txt
 python3.6 app.py
 ```
