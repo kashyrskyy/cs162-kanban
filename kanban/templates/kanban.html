@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<title>
+kanban
+</title>
+<h1>Kalia's Kanban</h1>
+
+{% if current_user.is_authenticated %}
+  <h2>Hi {{ current_user.username }}!</h2>
+{% endif %}
+
+<div class="flexbox-container">
+
+    <div style="background: #F0F0F0">
+        <h2>tasks to do</h2>
+        <form action="/todoing" method="POST">
+            {% for todo in todolist %}
+            <ul>
+                <li>{{todo.task}}</li>
+                    <ul>
+                        <li>{{todo.descrip}}</li>
+                    </ul>
+                <input type='submit' name = '{{todo.id}}' value='DOING'>
+            </ul>
+            {% endfor %}
+        </form>
+    </div>
+
+    <div style="background:#E0E0E0">
+        <h2>tasks being done</h2>
+        <form action='/todone' method="POST">
+            {% for doing in doinglist %}
+            <ul>
+                <li>{{doing.task}}</li>
+                    <ul>
+                        <li>{{doing.descrip}}</li>
+                    </ul>
+                <input type='submit' name = '{{doing.id}}' value='DONE'>
+            </ul>
+            {% endfor %}
+        </form>
+    </div>
+
+    <div style="background: #D8D8D8">
+        <h2>tasks that are done</h2>
+        <form action='/delete' method='POST'>
+            {% for done in donelist %}
+            <ul>
+                <li>{{done.task}}</li>
+                    <ul>
+                        <li>{{done.descrip}}</li>
+                    </ul>
+                <input type="submit" name="{{done.id}}" value='DELETE'>
+            </ul>
+            {% endfor %}
+        </form>
+    </div>
+
+</div>
+
+<br>
+
+<div>
+    <h3 style="margin-left: 20px">new task</h2>
+     <form style="margin-left: 20px" action="/add" method="POST">
+        <input type="text" name="todoitem" placeholder="Task Title">
+        <br>
+        <textarea cols="30" rows="5" name="tododescrip" placeholder="Task Description"></textarea>
+        <br>
+        <button type="submit">
+            Submit
+        </button>
+        <button type="reset">
+            Reset
+        </button>
+     </form>
+</div>
+<br>
+<div style="margin-left: 20px">
+    <form action="/logout">
+        <input type="submit" name="logout" value="Logout">
+    </form>
+</div>
+
+</html>
