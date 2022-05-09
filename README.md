@@ -1,5 +1,9 @@
 # CS162 Web App Assignment - Andriy Kashyrskyy
 
+## Application Description
+
+The Kanban Board helps you get around you day by managing your day-to-day list of tasks to be completed. 
+
 ## Application Features
 
 [picture here]
