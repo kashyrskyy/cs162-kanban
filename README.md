@@ -100,3 +100,22 @@ cs162-kanban-1
 * [README.md](./cs162-kanban-1/README.md)
 * [app.py](./cs162-kanban-1/app.py)
 * [requirements.txt](./cs162-kanban-1/requirements.txt)
+
+\dirtree{%
+  . 1 cs162-kanban-1/ .
+  . 2 static/ .
+  . 3 js/ .
+  . 4 kanban_board.js .
+  . 3 kanban_board.css .
+  . 3 login.css .
+  . 3 signup.css .
+  . 2 templates/ .
+  . 3 kanban_board.html .
+  . 3 login.html .
+  . 3 signup.html .
+  . 2 tests/ .
+  . 3 test.py .
+  . 2 README.md .
+  . 2 app.py .
+  . 2 requirements.txt .
+}
