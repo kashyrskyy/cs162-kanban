@@ -1,0 +1,119 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #000000;
+}
+  
+section {
+    background: black;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+  
+h1{
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin: 2em auto 0px;
+}
+  
+h3{
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin: 2em auto 0px;
+}
+
+p{
+    text-align: center;
+    font-family: sans-serif;
+    color: gray;
+    display: block;
+    color: #fff;
+    margin: 15px auto;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 12px;
+}
+  
+input[type="text"]{
+    display: block;
+    width: 309px;
+    height: 35px;
+    margin: 15px auto;
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+  
+input[type="password"]{
+    display: block;
+    width: 309px;
+    height: 35px;
+    margin: 15px auto;
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.form{
+    width: 400px;
+    height: 230px;
+    background: #edeff1;
+    margin: 0px auto;
+    padding-top: 20px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+  
+#login-button {
+    display: block;
+    background: #89C9FA;
+    width: 309px;
+    padding: 8px;
+    cursor: pointer;
+    border: 0px;
+    margin: auto;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+  
+#signup-button {
+    display: block;
+    background: #DDFAB3;
+    width: 309px;
+    padding: 8px;
+    cursor: pointer;
+    border: 0px;
+    margin: auto;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
