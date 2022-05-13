@@ -24,7 +24,6 @@ Note: Make sure you have opened the folder with this project by clicking "Open..
 python3.6 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
-python3.6 app.py
 ```
 
 #### For Windows:
@@ -32,8 +31,23 @@ python3.6 app.py
 python3.6 -m venv venv
 venv\Scripts\activate.bat
 pip3 install -r requirements.txt
-python3.6 app.py
 ```
+
+## Setting up a database
+
+Use the following commands in your Terminal
+```
+python
+```
+It will open a Python console, where you need to run 3 following commands:
+```
+from app import db
+
+db.create_all()
+
+exit()
+```
+Once you exit, you should be back in your project repository.
 
 ## Setting up the Flask Application
 
@@ -49,6 +63,14 @@ set FLASK_APP=kanban.py
 set FLASK_DEBUG=true
 flask run
 ```
+
+OR
+
+You can use the following command:
+```
+python app.py
+```
+And you should be able to access the website locally, in your browser by opening link http://127.0.0.1:5000/.
 
 ## Running Tests
 To test the application with unit tests, please run the command below. Make sure to be in the project's root directory.
