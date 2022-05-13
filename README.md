@@ -35,11 +35,11 @@ pip3 install -r requirements.txt
 
 ## Setting up a database
 
-Use the following commands in your Terminal
+Type the following command in your Terminal:
 ```
 python
 ```
-It will open a Python console, where you need to run 3 following commands:
+It will open a Python console, where you need to run 3 following commands, which will create a database file:
 ```
 from app import db
 
@@ -50,6 +50,14 @@ exit()
 Once you exit, you should be back in your project repository.
 
 ## Setting up the Flask Application
+
+You can use the following command:
+```
+python app.py
+```
+And you should be able to access the website locally, in your browser by opening link http://127.0.0.1:5000/.
+
+OR 
 
 ### For MacOS:
 ```
@@ -63,14 +71,6 @@ set FLASK_APP=kanban.py
 set FLASK_DEBUG=true
 flask run
 ```
-
-OR
-
-You can use the following command:
-```
-python app.py
-```
-And you should be able to access the website locally, in your browser by opening link http://127.0.0.1:5000/.
 
 ## Running Tests
 To test the application with unit tests, please run the command below. Make sure to be in the project's root directory.
