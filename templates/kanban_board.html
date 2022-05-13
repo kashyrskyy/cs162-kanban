@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='kanban_board.css') }}">
+    <script type="text/javascript" src="static/js/kanban_board.js"></script>
+    <title> Kanban Board Home Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="kanban-heading">
+          {% if current_user.is_authenticated%}
+          <strong class="kanban-heading-text"> Hi, @{{current_user.username}}!</strong>
+          {% endif %}
+        </div>
+        <div class="kanban-heading">
+          <strong class="kanban-heading-text"> Your tasks for today:</strong>
+        </div>
+
+        <div class="kanban-board">
+            <div class="kanban-block" id="todo">
+                <strong>To Do</strong>
+                <div class="task-button-block">
+                  <button id="task-button" onclick="createTask()"> Add a New Task</span>
+                </div>
+                <div>
+                  {% for task in tasks_todo %}
+                        <ul class="list_tasks">
+                          <li class="task">  {{task.task_name}}
+                            <p></p>
+                          <form method="POST" action="./update" style="display: inline-block">
+                            <input type="hidden" value="{{task.task_name}}" name="task_title">
+                            <input type="hidden" value="doing" name="updated_status">
+                            <input type="submit" id = "dotask-button" value="DO NOW">
+                          </form>
+                          <form method="POST" action="./delete" style="display: inline-block">
+                            <input type="hidden" value="{{task.task_name}}" name="task_name">
+                            <input type="submit" id = "erase-button" value="ERASE">
+                          </form>
+                          </li>
+                        </ul>
+                  {% endfor %}
+                </div>
+            </div>
+
+            <div class="kanban-block" id="doing">
+                <strong>Doing</strong>
+                <div>
+                  {% for task in tasks_doing %}
+                        <ul class = "list_tasks">
+                          <li class="task">  {{task.task_name}}
+                            <p></p>
+                            <form method="POST" action="./update" style="display: inline-block">
+                              <input type="hidden" value="{{task.task_name}}" name="task_title">
+                              <input type="hidden" value="done" name="updated_status">
+                              <input type="submit" id = "taskdone-button" value="DONE">
+                            </form>
+                            <form method="POST" action="./delete" style="display: inline-block">
+                              <input type="hidden" value="{{task.task_name}}" name="task_name">
+                              <input type="submit" id = "erase-button" value="ERASE">
+                            </form>
+                          </li>
+                        </ul>
+                    {% endfor %}
+                 </div>
+             </div>
+
+            <div class="kanban-block" id="done">
+                <strong>Done</strong>
+                <div>
+                  {% for task in tasks_done %}
+                        <ul class = "list_tasks">
+                          <li class="task">  {{task.task_name}}
+                            <p></p>
+                            <form method="POST" action="./delete" style="display: inline-block">
+                              <input type="hidden" value="{{task.task_name}}" name="task_name">
+                              <input type="submit" id = "erase-button" value="ERASE">
+                            </form>
+                         </li>
+                        </ul>
+                    {% endfor %}
+                 </div>
+            </div>
+
+            <div class="create-new-task-block" id="create-new-task-block">
+                <strong> New Task</strong>
+                <form method="POST" action="/kanban_board">
+                  <span class="form-row">
+                    <label class="form-row-label" for="task_name"> Title </label>
+                    <input class="form-row-input" type="text" name="task_name" id="task_name" required>
+                  </span>
+                  <span class="form-row">
+                    <label class="form-row-label" for="task_name"> Status </label>
+                    <select class="form-row-input" name="task_status" id="task_status">
+                        <option value="todo"> To Do </option>
+                        <option value="doing"> Doing </option>
+                        <option value="done"> Done </option>
+                    </select>
+                  </span>
+                  <span class="form-row-buttons">
+                    <input type="submit" id = "save-button" value="Save">
+                    <input type="button" id = "cancel-button" value="Cancel" onClick="window.location.href='/kanban_board'"/>         
+                  </span>
+                </form>
+             </div>
+         </div>
+     </div>
+    <div>
+      <h6> Are you done for today? Press the button below to log out.</h6>
+      <form method="POST" action="/logout" align="center">
+        <input type="submit" id = "logout-button" value= "Save Changes and Log Out">
+      </form>
+    </div>
+</body>
+</html>
