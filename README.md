@@ -16,7 +16,7 @@ Link to a quick demo about the application - https://bit.ly/cs162-kanban-board-d
 
 2. **Add a new task**: you can add a new task to your "To Do" section, which you can move up to "Doing" and "Done" Sections. 
 
-3. **Move the tasks**: Any task can be deleted (or "erased", as this is a kind of board!). All tasks can be moved to a different priority, a level up (with the lowest level being "To Do" -> then moving to "Doing, and -> "Done".
+3. **Move the tasks**: Any task can be deleted (or "erased", as this is a kind of board!). All tasks can be moved to a different priority, a level up (with the lowest level being "To Do" -> then moving to "Doing, and -> "Done").
 
 ## Initial Installation
 Please run the code commands below in the Terminal of your code reader (e.g. Visual Studio Code) to get started. 
