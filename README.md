@@ -6,13 +6,17 @@ The Kanban Board helps you to get around your day by managing your day-to-day li
 
 ## Application Features
 
-[picture here]
+Link to a quick demo about the application - https://bit.ly/cs162-kanban-board-demo.
 
-Feature 1.
+<img width="1440" alt="Screen Shot 2022-05-13 at 4 09 15 AM" src="https://user-images.githubusercontent.com/56770018/168237889-6c48c6d1-8ed2-4cd4-b475-85963dda133a.png">
 
-Feature 2.
+<img width="1440" alt="Screen Shot 2022-05-13 at 4 09 50 AM" src="https://user-images.githubusercontent.com/56770018/168237949-dea78464-fa91-4b4f-9eb5-b48b360bbb4a.png">
 
-Feature 3.
+Sign Up, Log In, & Log Out: you can authorize in the application with a username and a password that you set up. Once you log out, the changes will be saved locally in the database, thus when you log in back again - your tasks will still be there.
+
+Add a new task: you can add a new task to your "To Do" section, which you can move up to "Doing" and "Done" Sections. 
+
+Move the tasks: Any task can be deleted (or "erased", as this is a kind of board!). All tasks can be moved to a different priority, a level up (with the lowest level being "To Do" -> then moving to "Doing, and -> "Done".
 
 ## Initial Installation
 Please run the code commands below in the Terminal of your code reader (e.g. Visual Studio Code) to get started. 
