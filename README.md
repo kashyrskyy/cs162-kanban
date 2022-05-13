@@ -82,3 +82,21 @@ To test the application with unit tests, please run the command below. Make sure
 ```
 python3 -m unittest discover test
 ```
+## Kanban Board Application Folder Structure
+
+cs162-kanban-1
+* [static/](./cs162-kanban-1/static)
+  * [js/](./cs162-kanban-1/static/js)
+    * [kanban_board.js](./cs162-kanban-1/static/js/kanban_board.js)
+  * [kanban_board.css](./cs162-kanban-1/static/kanban_board.css)
+  * [login.css](./cs162-kanban-1/static/login.css)
+  * [signup.css](./cs162-kanban-1/static/signup.css)
+* [templates/](./cs162-kanban-1/templates)
+  * [kanban_board.html](./cs162-kanban-1/templates/kanban_board.html)
+  * [login.html](./cs162-kanban-1/templates/login.html)
+  * [signup.html](./cs162-kanban-1/templates/signup.html)
+* [tests/](./cs162-kanban-1/tests)
+  * [test.py](./cs162-kanban-1/tests/test.py)
+* [README.md](./cs162-kanban-1/README.md)
+* [app.py](./cs162-kanban-1/app.py)
+* [requirements.txt](./cs162-kanban-1/requirements.txt)
