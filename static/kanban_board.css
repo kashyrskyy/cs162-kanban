@@ -1,0 +1,220 @@
+body {
+background-color: black;
+}
+
+p {
+    margin: 0.1;
+}
+
+h6 {
+color: #DAE3E5;
+text-align: center;
+font-family: sans-serif;
+}
+
+li {
+list-style-type: none;
+width: 250px;
+display: inline-block;
+}
+
+.container {
+width: 70%;
+min-width: 50%;
+margin: auto;
+display: flex;
+flex-direction: column;
+}
+
+.kanban-board {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+font-family: sans-serif;
+}
+
+.kanban-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.kanban-heading-text {
+font-size: 1.8rem;
+background-color: #DAE3E5;
+padding: 0.8rem 1.7rem;
+border-radius: 0.5rem;
+margin: 1rem;
+}
+
+.kanban-block {
+padding: 0.6rem;
+width: 31%;
+min-width: 14rem;
+min-height: 4.5rem;
+border-radius: 0.3rem;
+}
+
+.create-new-task-block {
+padding: 0.6rem;
+width: 30.5%;
+min-width: 14rem;
+min-height: 4.5rem;
+border-radius: 0.3rem;
+}
+
+.create-new-task-block {
+display: none;
+background: #FFC53D;
+width: 64.4%;
+flex-direction: column;
+}
+
+.list_tasks { 
+list-style-type: none; 
+margin:0; 
+padding:2px; 
+min-height:30px; 
+border-radius: 5px;
+}
+
+.list_tasks li {
+display: inline-block;
+margin: 2px 2px 2px 2px; 
+padding: 0.5em; 
+padding-left: 1.5em; 
+font-size: 1em; 
+font-family: sans-serif;
+}
+
+.list_tasks li span { 
+position: absolute; 
+margin-left: -1.3em; 
+}
+
+.task {
+    margin: 0.2rem 0rem 0.1rem 0rem;
+    display: inline-block;
+    background-color: white;
+    border: 0.20rem solid black;
+    border-radius: 0.3rem;
+    padding: 0.5rem 2.7rem;
+    font-size: 0.5rem;
+}
+
+.form-row {
+display: flex;
+flex-direction: row;
+margin: 0.2rem;
+}
+    
+.form-row-label {
+width: 15%;
+padding: 0.2rem;
+padding-right: 0.5rem;
+border: 0.1rem solid black;
+border-right: 0;
+border-radius: 0.2rem 0rem 0rem 0.2rem;
+}
+    
+.form-row-input {
+border: 0.1rem solid black;
+border-radius: 0rem 0.2rem 0.2rem 0rem;
+width: 85%;
+}
+    
+.form-row-buttons {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 0.2rem;
+}
+
+#todo {
+background-color: #FCD0A1;
+}
+
+#doing {
+background-color: #B1B695;
+}
+
+#done {
+background-color: #53917E;
+}
+
+#task-button {
+margin: 0.2rem 0rem 0.1rem 0rem;
+background-color: #FBD988;
+width: 100%;
+border: 0.25rem solid black;
+padding: 0.5rem 2.7rem;
+border-radius: 0.3rem;
+font-size: 1rem;
+}
+
+#save-button {
+margin: 0.2rem 0rem 0.1rem 0rem;
+background-color: #9BC53D;
+border-radius: 0.2rem;
+width: 49.2%;
+border: 0.25rem solid black;
+padding: 0.5rem 2.7rem;
+border-radius: 0.3rem;
+font-size: 1rem;
+}
+
+#cancel-button {
+margin: 0.2rem 0rem 0.1rem 0rem;
+background-color: #C3423F;
+border-radius: 0.2rem;
+width: 49.2%;
+border: 0.25rem solid black;
+padding: 0.5rem 2.7rem;
+border-radius: 0.3rem;
+font-size: 1rem;
+}
+
+#logout-button {
+margin: 0.1rem 0rem 0.1rem 0rem;
+background-color: #B1B695;
+border-radius: 0.05rem;
+width: fit-content;
+border: 0.1rem solid black;
+padding: 0.5rem 0.5rem;
+border-radius: 0.3rem;
+font-size: 0.8rem;
+}
+
+#dotask-button {
+margin: 0.1rem 0rem 0.1rem 0rem;
+background-color: #F5D6BA;
+border-radius: 0.05rem;
+width: fit-content;
+border: 0.1rem solid black;
+padding: 0.5rem 0.5rem;
+border-radius: 0.3rem;
+font-size: 0.8rem;
+}
+
+#taskdone-button {
+margin: 0.1rem 0rem 0.1rem 0rem;
+background-color: #ACC3A6;
+border-radius: 0.05rem;
+width: fit-content;
+border: 0.1rem solid black;
+padding: 0.5rem 0.5rem;
+border-radius: 0.3rem;
+font-size: 0.8rem;
+}
+
+#erase-button {
+margin: 0.1rem 0rem 0.1rem 0rem;
+background-color: #F49D6E;
+border-radius: 0.05rem;
+width: fit-content;
+border: 0.1rem solid black;
+padding: 0.5rem 0.5rem;
+border-radius: 0.3rem;
+font-size: 0.8rem;
+}
