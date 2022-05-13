@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <title> Kanban Board Log-In Page</title>
+  </head>
+
+  <section>
+  <body>
+    <div class="container" align= "center">
+      <h1> 👋 Welcome to Kanban Board! 🗓️</h1>
+      <h3> Log in to your account to get started.</h3>
+      <br>
+      <form action="" method="POST">
+        <input type="text" placeholder="Enter Username..." name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Enter Password..." name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" id="login-button" value="Log In">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Ooops! Following ERROR occurred:</strong> {{ error }}
+      {% endif %}
+      <p></p>
+      <form method="GET" action="/signup">
+        <h3> Not registered yet? No worries!👇</h3>
+        <p></p>
+        <input id= "signup-button" type="submit" value="Sign Up">
+      </form>
+    </div>
+  </body>
+  </section>
+
+</html>
